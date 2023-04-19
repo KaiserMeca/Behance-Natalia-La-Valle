@@ -1,0 +1,75 @@
+﻿<Window x:Class="Behance_Natalia_La_Valle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Behance_Natalia_La_Valle" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="660" Width="1060" Background="#ECE2C6" x:Name="Self">
+    <Grid Margin="0,0,25,0">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="109" ></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Grid.ColumnSpan="1" ClipToBounds="True">
+            <StackPanel Canvas.Left="114" Canvas.Top="52">
+                <!--<TextBlock Text="NATALIA" Foreground="#1D455B" FontWeight="SemiBold" FontFamily="Century Gothic" ></TextBlock>
+                <TextBlock Text="LA VALLE" Foreground="#1D455B" FontWeight="SemiBold" FontFamily="Century Gothic"></TextBlock>-->
+                <!--<Image Source="C:\Users\User\Documents\Imagenes_recursos Wpf\Recorte Natalia .jpg"></Image>-->
+            </StackPanel>
+            <Line X1="0" Y1="109" X2="2000" Y2="109" StrokeThickness="3" Stroke="#1D455B"></Line>
+            <Rectangle Stroke="#1D455B"  StrokeThickness="1.5" Width="121" Height="90" RadiusX="23" RadiusY="23" Fill="#ECE2C6" 
+                        Canvas.Top="55" Canvas.Right="{Binding Path=Move, Mode=OneWay}"></Rectangle>
+            <Button x:Name="BtnPortfolio" Style="{DynamicResource ButtonK}" Click="BtnPortfolio_Click" Padding="0,11,0,0" Focusable="False" Width="56" Height="35" Canvas.Right="380" Canvas.Top="67" Foreground="#1D455B" 
+                    FontSize="13" BorderThickness="0,0,0,0" FontWeight="SemiBold" Background="#FFECE2C6">portfolio</Button>
+            <Button x:Name="BtnLanzamientos" Style="{DynamicResource ButtonK}" Click="BtnPortfolio_Click" Padding="0,11,0,0" Focusable="False" Width="84" Height="35" Canvas.Right="250" Canvas.Top="67" Background="#ECE2C6" Foreground="#1D455B" 
+                    FontSize="13" BorderThickness="0,0,0,0" FontWeight="SemiBold">lanzamientos</Button>
+            <Button x:Name="BtnHablemos" Style="{DynamicResource ButtonK}" Click="BtnPortfolio_Click" Padding="0,11,0,0" Focusable="False" Width="62" Height="35" Canvas.Right="150" Canvas.Top="67" Background="#ECE2C6" Foreground="#1D455B" 
+                    FontSize="13" BorderThickness="0,0,0,0" FontWeight="SemiBold">hablemos</Button>
+        </Canvas>
+        <Canvas Background="#ECE2C6" Grid.Row="1" Margin="0,0,-25,0">
+            <Ellipse Width="118" Height="118" StrokeThickness="4" Stroke="#1D455B" Canvas.Right="138" Canvas.Top="109"></Ellipse>
+            <Ellipse Width="100" Height="100" StrokeThickness="4" Stroke="#1D455B" Canvas.Right="303" Canvas.Top="136" ></Ellipse>
+            <Ellipse Width="100" Height="100" StrokeThickness="4" Stroke="#1D455B" Canvas.Right="374" Canvas.Top="252" ></Ellipse>
+            <Ellipse Width="100" Height="100" StrokeThickness="4" Stroke="#1D455B" Canvas.Right="200" Canvas.Top="242" ></Ellipse>
+
+            <Button x:Name="BtnBranding" Style="{DynamicResource ButtonK}" Click="BtnBranding_Click" Focusable="False" Width="70" Height="70" Canvas.Right="160" Canvas.Top="134" Background="#ECE2C6" Foreground="#1D455B" FontWeight="SemiBold"
+                    FontSize="15" BorderThickness="0,0,0,0">branding</Button>
+            <Button x:Name="BtnPieces" Style="{DynamicResource ButtonK}" Click="BtnBranding_Click"  Focusable="False" Width="56" Height="60" Canvas.Right="395" Canvas.Top="273" Background="#ECE2C6" Foreground="#1D455B" FontWeight="SemiBold"
+                    FontSize="15" BorderThickness="0,0,0,0">pieces</Button>
+            <Button x:Name="BtnUiUx" Style="{DynamicResource ButtonK}" Click="BtnPieces_Click"  Focusable="False" Width="56" Height="60" Canvas.Right="325" Canvas.Top="157" Background="#ECE2C6" Foreground="#1D455B" FontWeight="SemiBold"
+                    FontSize="14" BorderThickness="0,0,0,0">UI/UX</Button>
+            <Button x:Name="BtnLab" Style="{DynamicResource ButtonK}" Click="BtnPieces_Click"  Focusable="False" Width="56" Height="60" Canvas.Right="222" Canvas.Top="263" Background="#ECE2C6" Foreground="#1D455B" FontWeight="SemiBold"
+                    FontSize="15" BorderThickness="0,0,0,0">lab.</Button>
+            <Polygon  Points="9,22 14,10, 0,13" Stroke="#1D455B" Fill="#1D455B" Canvas.Right="380" Canvas.Top="250" RenderTransformOrigin="-2.075,2.25" >
+
+                <Polygon.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform x:Name="RotatePieces" Angle="361.929"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Polygon.RenderTransform>
+            </Polygon>
+            <Polygon Points="2,12 20,13, 7,27" Stroke="#1D455B" Fill="#1D455B" Canvas.Right="232" Canvas.Top="112" RenderTransformOrigin="2.754,2.017" >
+                <Polygon.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform x:Name="RotateBranding" Angle="19.829"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Polygon.RenderTransform>
+            </Polygon>
+            <Canvas Width="530" Height="467" Canvas.Left="10" Canvas.Top="-22">
+                <!--<Image Source="C:\Users\User\Documents\Imagenes_recursos Wpf\Imagen Naty2.jpg" Width="515" Stretch="Fill" Canvas.Left="30" Canvas.Top="22" Height="445"/>-->
+            </Canvas>
+            <Grid Margin="0">
+                <Rectangle Height="750" StrokeThickness="0.7" Stroke="#1D455B" 
+                       RadiusX="28" RadiusY="28" Width="1010" Margin="20,-80,10,0" Canvas.Right="25"></Rectangle>
+            </Grid>
+          
+        </Canvas>
+    </Grid>
+</Window>
